@@ -11,7 +11,7 @@ public class Produto {
 	public Produto() {
 
 	}
-
+	
 	public Produto(String descricao, int quantidade, double preco, boolean onLine) {
 		this.descricao = descricao;
 		this.quantidade = quantidade;
