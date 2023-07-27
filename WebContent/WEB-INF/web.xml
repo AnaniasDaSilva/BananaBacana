@@ -10,9 +10,40 @@
  <servlet-class>banana.controller.cadastrarProdutoController</servlet-class>
  </servlet>
  
- <servlet-mapping>
+   <servlet-mapping>
  	<servlet-name>cadastrar</servlet-name>
  	<url-pattern>/cadastrarProduto</url-pattern>
+ </servlet-mapping>
+ 
+ 
+ <servlet>
+ 	<servlet-name>modificar</servlet-name>
+ 	<servlet-class>/banana.controller.modificarProdutosController</servlet-class>
+ </servlet>
+ 
+  <servlet-mapping>
+ 	<servlet-name>modificar</servlet-name>
+ 	<url-pattern>/modificarProduto</url-pattern>
+ </servlet-mapping>
+ 
+  <servlet>
+ 	<servlet-name>buscar</servlet-name>
+ 	<servlet-class>/banana.controller.buscarProdutosController</servlet-class>
+ </servlet>
+ 
+  <servlet-mapping>
+ 	<servlet-name>buscar</servlet-name>
+ 	<url-pattern>/buscarProdutos</url-pattern>
+ </servlet-mapping>
+ 
+ <servlet>
+ 	<servlet-name>alterar</servlet-name>
+ 	<servlet-class>/banana.controller.alterarProdutoController</servlet-class>
+ </servlet>
+ 
+    <servlet-mapping>
+ 	<servlet-name>alterar</servlet-name>
+ 	<url-pattern>/alterarProduto</url-pattern>
  </servlet-mapping>
   
 </web-app>
