@@ -6,7 +6,6 @@ import banana.dao.ProdutoDao;
 
 public class Produto {
 
-	
 	private int idProduto;
 	private String descricao;
 	private int quantidade;
@@ -16,7 +15,7 @@ public class Produto {
 	public Produto() {
 
 	}
-	
+
 	public Produto(String descricao, int quantidade, double preco, boolean onLine) {
 		this.descricao = descricao;
 		this.quantidade = quantidade;
@@ -54,7 +53,6 @@ public class Produto {
 
 	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
-		
 	}
 
 	public double getPreco() {
@@ -72,7 +70,7 @@ public class Produto {
 	public void setOnLine(boolean onLine) {
 		this.onLine = onLine;
 	}
-	
+
 	public void salvar() {
 		new ProdutoDao().cadastrarProduto(this);
 	}
@@ -80,29 +78,17 @@ public class Produto {
 	public void excluir(int idProduto) {
 		new ProdutoDao().ExcluirProduto(idProduto);
 	}
+
+	public void alterar() {
+		new ProdutoDao().AlterarProduto(this);
+	}
 	
 	public Produto buscarProdutoPorId(int idProduto) {
 		return new ProdutoDao().BuscarProdutoPorId(idProduto);
 	}
 	
-	public void alterar() {
-		new ProdutoDao().AlterarProduto(this);
-	}
-	
-	
-	public ArrayList<Produto> buscarProdutoPorDescricao(String descricao) {
+	public ArrayList<Produto> buscarProdutosPorDescricao(String descricao) {
 		return new ProdutoDao().BuscarProdutosPorDescricao(descricao);
-	}
-
-	public void excluir(Integer valueOf) {
-		// TODO Auto-generated method stub
 		
 	}
-
-	public Produto buscarProdutoPorId(Integer valueOf) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
 }

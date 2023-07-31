@@ -25,7 +25,6 @@ public class buscarProdutosController extends HttpServlet {
      */
     public buscarProdutosController() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -42,12 +41,11 @@ public class buscarProdutosController extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 		String descricao = request.getParameter("descricao");
-		ArrayList<Produto> produtos = new Produto().buscarProdutoPorDescricao(descricao);
+		ArrayList<Produto> produtos = new Produto().buscarProdutosPorDescricao(descricao);
 			
 		request.setAttribute("produtos", produtos);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("consultarProduto.jsp");
 		dispatcher.forward(request, response);
-		
 		
 	}
 

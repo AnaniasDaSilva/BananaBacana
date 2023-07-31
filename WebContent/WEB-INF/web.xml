@@ -18,7 +18,7 @@
  
  <servlet>
  	<servlet-name>modificar</servlet-name>
- 	<servlet-class>/banana.controller.modificarProdutosController</servlet-class>
+ 	<servlet-class>banana.controller.modificarProdutoController</servlet-class>
  </servlet>
  
   <servlet-mapping>
@@ -28,7 +28,7 @@
  
   <servlet>
  	<servlet-name>buscar</servlet-name>
- 	<servlet-class>/banana.controller.buscarProdutosController</servlet-class>
+ 	<servlet-class>banana.controller.buscarProdutosController</servlet-class>
  </servlet>
  
   <servlet-mapping>
@@ -38,7 +38,7 @@
  
  <servlet>
  	<servlet-name>alterar</servlet-name>
- 	<servlet-class>/banana.controller.alterarProdutoController</servlet-class>
+ 	<servlet-class>banana.controller.alterarProdutoController</servlet-class>
  </servlet>
  
     <servlet-mapping>

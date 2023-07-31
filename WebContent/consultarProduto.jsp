@@ -43,7 +43,7 @@
 			List<?> produtos = (List<?>) request.getAttribute("produtos");
 			for (int contador = 0; contador <= (produtos.size() - 1); contador++) {
 				Produto produto = (Produto) produtos.get(contador);%>
-		<form action="modificarProdutoController" method="post">
+		<form action="modificarProduto" method="post">
 			<div class="bananaDivMother">
 				<div class="bananaDivItem">
 					<div class="bananaColumn">

@@ -1,5 +1,4 @@
-
-	package banana.dao;
+package banana.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -45,7 +44,7 @@ public class ProdutoDao {
 	}
 
 	public Produto BuscarProdutoPorId(int id) {
-		String sql = "SELECT * FROM PRODUTO WHERE IDPRODUTO = ?";
+		String sql = "SELECT * FROM PRODUTO WHERE idProduto = ?";
 		ResultSet rs = null;
 		Connection conn = null;
 		PreparedStatement pStatement = null;
@@ -62,28 +61,28 @@ public class ProdutoDao {
 				produto.setQuantidade(rs.getInt("quantidade"));
 				produto.setPreco(rs.getDouble("preco"));
 				produto.setOnLine(rs.getBoolean("onLine"));
-				
 			}
-			}catch (Exception e) {
-				e.printStackTrace();
-		}finally {
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
 			try {
-				if (pStatement!=null) {
-					pStatement.close();}
-				}catch (SQLException e1) {
-					e1.printStackTrace();
+				if (pStatement != null) {
+					pStatement.close();
+				}
+			} catch (SQLException e1) {
+				e1.printStackTrace();
 			}
 			try {
-				if (conn!=null) {conn.close();}
-				}catch (SQLException e2) {
-					e2.printStackTrace();
+				if (conn != null) {
+					conn.close();
+				}
+			} catch (SQLException e2) {
+				e2.printStackTrace();
 			}
 		}
-		
 		return produto;
-		
 	}
-	
+
 	public ArrayList<Produto> BuscarProdutosPorDescricao(String descricao) {
 		String sql = "SELECT * FROM PRODUTO WHERE descricao LIKE '%" + descricao + "%'";
 		ResultSet rs = null;
@@ -191,12 +190,3 @@ public class ProdutoDao {
 }
 		
 	
-
-			
-		
-		
-		
-	
-	
-
-

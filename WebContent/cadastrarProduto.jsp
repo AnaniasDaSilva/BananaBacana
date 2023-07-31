@@ -20,7 +20,7 @@
 	<main class="bananaMain">
 		<form action="cadastrarProduto" method="post" class="bananaForm">
 			<div>
-				<label><strong>Descricao:</strong></label><input type="text"
+				<label><strong>Descrição:</strong></label><input type="text"
 					name="descricao">
 			</div>
 			<div>
@@ -28,17 +28,17 @@
 					name="quantidade">
 			</div>
 			<div>
-				<label><strong>Preco:</strong></label><input type="text"
+				<label><strong>Preço:</strong></label><input type="text"
 					name="preco">
 			</div>
 
-			<label><strong>Disponivel On-Line:</strong></label><input
-				type="checkbox" name="online"> <br>
+			<label><strong>Disponível On-Line:</strong></label><input
+				type="checkbox" name="online" value="true"> <br>
 			<div>
 				<input id="bananaButton" type="submit" name="salvar"
 					value="Cadastrar Produto">
 			</div>
-			<br>
+			
 			<div>
 				<%
 				String mensagem = (String) request.getAttribute("mensagem");
